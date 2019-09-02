@@ -14,6 +14,7 @@ This implementation uses [scikit0learn](https://scikit-learn.org/stable/)
 
 ```shell
 ## Download the repository
-
+git clone https://github.com/chenying3176/CAU.git
 cd CAU
+
 '''
