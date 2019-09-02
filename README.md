@@ -39,7 +39,7 @@ run the following command:
 python scripts/data_processing.py
 ```
 
-after this command, ypur directory tree would look like this:
+after this command, your directory tree would look like this:
 ```
 ${POSE_ROOT}
 ├── exp_data
