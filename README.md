@@ -9,10 +9,9 @@ Make sure the following packages have already been installed before moving on:
 * Numpy
 
 ## install
-Clone the repo
+Download the repository
 
 ```shell
-## Download the repository
 git clone https://github.com/chenying3176/CAU.git
 cd CAU
 
