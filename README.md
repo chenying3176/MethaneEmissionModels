@@ -56,6 +56,7 @@ The data that will be used to train and test have been saved under the tow new f
 
 ### train&test
 Before strat training, you should add an empty folder called 'result' under the root, and your directory tree should look like this:
+```
 ├── exp_data
       ├── dataset_sample.xlsx
       ├── beijing
@@ -66,7 +67,7 @@ Before strat training, you should add an empty folder called 'result' under the 
       └── data_processing_util.py
 ├── result
 └── README.md
-
+```
 Then, to train and acquire the test result, run the following command:
 ```
 python scripts/training_and_test.py
