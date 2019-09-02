@@ -613,34 +613,7 @@ def train_models_for_fixed_feats(trian_10, test_10, val_10, y_train_10, y_test_1
 			all_feat_data = train + val + test 
 			all_tag_data = y_train + y_val + y_test 
 			
-			# y_test = y_val
-			# test = val
-			# if region_type == 'DW' and tag_type == 'CH4':
-			# 	y_test = BHB_DW_CH4_Y_test
-			# 	test = BHB_DW_CH4_X_test
-			# elif region_type == 'DW' and tag_type == 'CO2':
-			# 	y_test = BHB_DW_CO2_Y_test
-			# 	test = BHB_DW_CO2_X_test
-			# elif region_type == 'LIT' and tag_type == 'CH4':
-			# 	y_test = BHB_LIT_CH4_Y_test
-			# 	test = BHB_LIT_CH4_X_test
-			# elif region_type == 'LIT' and tag_type == 'CO2':
-			# 	y_test = BHB_LIT_CO2_Y_test
-			# 	test = BHB_LIT_CO2_X_test
-
-			# if region_type == 'DW' and tag_type == 'CH4':
-			# 	y_test = YDS_DW_CH4_Y_test
-			# 	test = YDS_DW_CH4_X_test
-			# elif region_type == 'DW' and tag_type == 'CO2':
-			# 	y_test = YDS_DW_CO2_Y_test
-			# 	test = YDS_DW_CO2_X_test
-			# elif region_type == 'LIT' and tag_type == 'CH4':
-			# 	y_test = YDS_LIT_CH4_Y_test
-			# 	test = YDS_LIT_CH4_X_test
-			# elif region_type == 'LIT' and tag_type == 'CO2':
-			# 	y_test = YDS_LIT_CO2_Y_test
-			# 	test = YDS_LIT_CO2_X_test 
-
+			
 			# select features  
 			train = select_features(train, include_feat_indeies, exclude_feat_indeies)
 			val = select_features(val, include_feat_indeies, exclude_feat_indeies)
@@ -690,35 +663,6 @@ def train_models_for_fixed_feats(trian_10, test_10, val_10, y_train_10, y_test_1
 					id_test = id_val
 				predict = model.predict(test)      
 
-
-			# if train_type == 'bagging':
-			# 	model_list  = bagging_models.fit(train, val, y_train,  y_val, model_type, randomstate)
-			# 	# model = ensemble.BaggingRegressor(max_samples = 1.0, max_features = 0.8, warm_start = True, base_estimator = model, random_state = randomstate, n_estimators = 100, n_jobs = 50) 
-			# 	predict = bagging_models.predict(model_list, test, y_test)
-			# else:
-			# 	# poly = preprocessing.PolynomialFeatures(degree=2, include_bias=False, interaction_only=False)
-			# 	# train = poly.fit_transform(train)
-			# 	# test = poly.fit_transform(test)
-			# 	# val = poly.fit_transform(val)
-			# 	# model = linear_model.LinearRegression(n_jobs = 3) 
-
-			# 	if model_type == 'Linear':
-			# 		model = linear_model.LinearRegression(n_jobs = 3)
-			# 	elif model_type == 'SVR':
-			# 		model = svm.SVR(C=3.0, cache_size=50, degree=3, gamma='auto', kernel='rbf', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
-			# 		# model = svm.SVR(C=3.0, cache_size=50, degree=2, gamma='auto', kernel='sigmoid', max_iter=-1, shrinking=True, tol=0.001, verbose=False)
-			# 	elif model_type == 'DT':
-			# 		model = DecisionTreeRegressor(random_state=randomstate)  
-			# 	elif model_type == 'MLP':
-			# 		model = MLPRegressor(random_state=randomstate)  
-
-			# 	model.fit(train, y_train)
-			# 	predict = model.predict(test)   
-				# print(model.coef_, model.intercept_)
-
-			# print(len(predict), len(y_val))
-			# for p_y, g_y in zip(predict, y_test):
-			# 	print(p_y, g_y)  
 
 			cv_y_test.extend(y_test)
 			cv_predict.extend(predict)
