@@ -851,36 +851,36 @@ if __name__ == '__main__':
 	if region_type == 'DW':
 		if bank_name == 'all':
 			if tag_type == 'N2O':
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing/N2O/'
+				exp_data_dir_path = '/exp_data/beijing/N2O/'
 			else:
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing/DW/' 
+				exp_data_dir_path = '/exp_data/beijing/DW/' 
 		else:
 			if tag_type == 'N2O':
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/MY/N2O/'
-				bhb_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/BHB/N2O/' 
-				yds_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/YDS/N2O/' 
+				exp_data_dir_path = '/exp_data/beijing_others/MY/N2O/'
+				bhb_exp_data_dir_path = '/exp_data/beijing_others/BHB/N2O/' 
+				yds_exp_data_dir_path = '/exp_data/beijing_others/YDS/N2O/' 
 			else:
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/MY/DW/' 
-				bhb_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/BHB/DW/' 
-				yds_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/YDS/DW/' 
+				exp_data_dir_path = '/exp_data/beijing_others/MY/DW/' 
+				bhb_exp_data_dir_path = '/exp_data/beijing_others/BHB/DW/' 
+				yds_exp_data_dir_path = '/exp_data/beijing_others/YDS/DW/' 
 			
 		
 	elif region_type == 'LIT':
 
 		if bank_name == 'all':
 			if tag_type == 'N2O':
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing/N2O/'
+				exp_data_dir_path = '/exp_data/beijing/N2O/'
 			else:
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing/LIT/'
+				exp_data_dir_path = '/exp_data/beijing/LIT/'
 		else:
 			if tag_type == 'N2O':
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/MY/N2O/'
-				bhb_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/BHB/N2O/' 
-				yds_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/YDS/N2O/' 
+				exp_data_dir_path = '/exp_data/beijing_others/MY/N2O/'
+				bhb_exp_data_dir_path = '/exp_data/beijing_others/BHB/N2O/' 
+				yds_exp_data_dir_path = '/exp_data/beijing_others/YDS/N2O/' 
 			else:
-				exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/MY/LIT/'	
-				bhb_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/BHB/LIT/' 
-				yds_exp_data_dir_path = '/home/cxy/zym/exp_data/beijing_others/YDS/LIT/' 
+				exp_data_dir_path = '/exp_data/beijing_others/MY/LIT/'	
+				bhb_exp_data_dir_path = '/exp_data/beijing_others/BHB/LIT/' 
+				yds_exp_data_dir_path = '/exp_data/beijing_others/YDS/LIT/' 
 		
 	
 
@@ -894,10 +894,10 @@ if __name__ == '__main__':
 
 	
 	if bank_name == 'all':
-		model_file_path = '/home/cxy/zym/result/beijing_val_CO2_'+region_type +'_'+ train_type + '.txt' 
+		model_file_path = '/result/beijing_val_CO2_'+region_type +'_'+ train_type + '.txt' 
 		training_data_name = 'beijing'
 	else:
-		model_file_path = '/home/cxy/zym/result/beijing_my_val_CO2_'+region_type +'_'+ train_type + '.txt' 
+		model_file_path = '/result/beijing_my_val_CO2_'+region_type +'_'+ train_type + '.txt' 
 		training_data_name = 'beijing_MY'
 	max_feats, max_r2 = seach_features(region_type, tag_type, train_type, model_type,feat_search_method, exp_data_dir_path, model_file_path,skip_feat_indeies)
 
@@ -907,7 +907,7 @@ if __name__ == '__main__':
 	include_feat_indeies = max_feats[-1] 
 	# include_feat_indeies = [4, 10, 5, 11]
 
-	result_dir = '/home/cxy/zym/result'
+	result_dir = '/result'
 
 	test_data_type = 'training_data'
 	if bank_name == 'all':
