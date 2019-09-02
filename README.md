@@ -11,8 +11,6 @@ Make sure the following packages have already been installed before moving on:
 ## install
 Clone the repo
 
-This implementation uses [scikit-learn](https://scikit-learn.org/stable/)
-
 ```shell
 ## Download the repository
 git clone https://github.com/chenying3176/CAU.git
