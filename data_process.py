@@ -12,15 +12,15 @@ excel = '/exp_data/000.Res_GHGs_yc.xlsx'
 
 bank_name='MY' # MY, BHB, YDS, BHB_YDS, all
 if bank_name == 'all':
-	exp_data_dir_path = '/home/yc/Code/projects/SoilCarbonAnalysis/exp_data/beijing/' 
+	exp_data_dir_path = '/exp_data/beijing/' 
 elif bank_name == 'MY':
-	exp_data_dir_path = '/home/yc/Code/projects/SoilCarbonAnalysis/exp_data/beijing_others/MY/' 
+	exp_data_dir_path = '/exp_data/beijing_others/MY/' 
 elif bank_name == 'BHB':
-	exp_data_dir_path = '/home/yc/Code/projects/SoilCarbonAnalysis/exp_data/beijing_others/BHB/' 
+	exp_data_dir_path = '/exp_data/beijing_others/BHB/' 
 elif bank_name == 'YDS':
-	exp_data_dir_path = '/home/yc/Code/projects/SoilCarbonAnalysis/exp_data/beijing_others/YDS/' 
+	exp_data_dir_path = '/exp_data/beijing_others/YDS/' 
 elif bank_name == 'BHB_YDS':
-	exp_data_dir_path = '/home/yc/Code/projects/SoilCarbonAnalysis/exp_data/beijing_others/BHB_YDS/' 
+	exp_data_dir_path = '/exp_data/beijing_others/BHB_YDS/' 
 
 
 def load_DW_CH4_subdata(DW_CH4, beg_index, end_index):
