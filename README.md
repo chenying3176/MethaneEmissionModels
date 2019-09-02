@@ -33,13 +33,13 @@ ${POSE_ROOT}
 
 ### data processing
 
-run the following command:
+Run the following command:
 
 ```
 python scripts/data_processing.py
 ```
 
-after this command, your directory tree would look like this:
+After this command, your directory tree would look like this:
 ```
 ${POSE_ROOT}
 ├── exp_data
@@ -52,12 +52,37 @@ ${POSE_ROOT}
       └── data_processing_util.py
 └── README.md
 ```
-the data that will be used to train and test have been saved under the tow new files: 'beijing' and 'beijing_others'
+The data that will be used to train and test have been saved under the tow new files: 'beijing' and 'beijing_others'
 
-### train
+### train&test
+Before strat training, you should add an empty folder called 'result' under the root, and your directory tree should look like this:
+├── exp_data
+      ├── dataset_sample.xlsx
+      ├── beijing
+      └── beijing_others
+├── scripts 
+      ├── training_and_test.py
+      ├── data_processing.py
+      └── data_processing_util.py
+├── result
+└── README.md
 
-run the following command:
+Then, to train and acquire the test result, run the following command:
 ```
 python scripts/training_and_test.py
 ```
+To get all the results in different region type, you can change a variation in main function of training_and_test.py:
+```
+region_type = 'DW'   # DW LIT
+```
+Similarly, you can change another variation to get all the results of different emission substance:
+```
+tag_type= 'C02'  # CO2  CH4 N2O 
+```
+Otherwise, the variation 'bank_name' indicate the region field scale:
+```
+bank_name='MY'   # MY,  all
+```
+
+
 
