@@ -8,7 +8,7 @@ import numpy
 from sklearn import preprocessing
 from  data_process_util import get_n_cv_split, insert_missing_feat,delete_missing_feat_instances,output_data
 
-excel = '/exp_data/000.Res_GHGs_yc.xlsx'
+excel = '/exp_data/dataset.xlsx'
 
 bank_name='MY' # MY, BHB, YDS, BHB_YDS, all
 if bank_name == 'all':
